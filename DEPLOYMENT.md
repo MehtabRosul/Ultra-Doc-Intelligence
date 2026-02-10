@@ -46,6 +46,16 @@ If you prefer to configure it manually:
 
 ## 🔗 Connecting Frontend
 
+### 1. Deploy Frontend on Vercel
+
+1.  **Import Project**: Select your `Ultra-Doc-Intelligence` repository.
+2.  **Framework Preset**: Select **Vite**.
+3.  **Root Directory**: Click **Edit** and selecting `frontend` folder. (⚠️ **Critical Step**)
+4.  **Environment Variables**: Add `VITE_API_URL` as mentioned above.
+5.  Click **Deploy**.
+
+### 2. Configure Environment Variables
+
 Once your backend is deployed on Render:
 
 1.  Copy your **Render Backend URL** (e.g., `https://ultra-doc-backend.onrender.com`).
@@ -53,5 +63,5 @@ Once your backend is deployed on Render:
 3.  Add a new variable:
     *   **Key**: `VITE_API_URL`
     *   **Value**: `https://ultra-doc-backend.onrender.com` (Your actual Render URL)
-4.  **Redeploy** your frontend on Vercel for the changes to take effect.
+4.  **Redeploy** (if needed) for the changes to take effect.
 
