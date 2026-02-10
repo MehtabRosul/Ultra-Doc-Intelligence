@@ -76,14 +76,6 @@ graph TD
 <div align="center">
   <img src="./public/Screenshot%202026-02-10%20220404.png" alt="Extraction View" width="800"/>
   <p><b>Extraction Grid</b></p>
-  <br>
-  <img src="./public/Screenshot%202026-02-10%20220451.png" alt="Data View" width="800"/>
-  <p><b>JSON Output</b></p>
-</div>
-
-*(Mobile Responsive)*
-<div align="center">
-  <img src="./public/Screenshot%202026-02-10%20220532.png" alt="Mobile View" width="400"/>
 </div>
 
 ---
