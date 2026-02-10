@@ -247,10 +247,12 @@ To ensure enterprise-grade reliability, the system implements a **Two-Gate Guard
 -   **"Low Confidence"**: The answer might be correct but lacks strong evidence.
 -   **"Refused"**: The retrieved context was too dissimilar to the query.
 
-### 5. Future Improvements
--   **Hybrid Search**: Combining Dense Vector Search (FAISS) with Sparse Keyword Search (BM25) to better capture specific part numbers/IDs.
--   **Re-ranking**: Implementing a Cross-Encoder (e.g., `ms-marco-MiniLM`) to re-rank the top 20 retrieved chunks for higher precision.
--   **Multi-Modal**: Adding OCR support to parse scanned images/receipts.
+### 5. Future Roadmap & Advanced Capabilities
+-   **🕵️‍♂️ Agentic Workflow Integration**: Transitioning from linear RAG to an **Autonomous Agent** architecture (using LangGraph). The system will dynamically plan steps, e.g., *"Check invoice first, if missing weight, cross-reference packing list."*
+-   **🕸️ GraphRAG (Knowledge Graphs)**: Instead of just vector similarity, mapping entities (Shipper, Consignee, PO#) into a **Knowledge Graph**. This enables multi-hop reasoning (e.g., *"Find all shipments sent by Supplier X in Q3"*) across millions of documents.
+-   **👁️ Multi-Modal Vision Transformers (ViT)**: Replacing text-based OCR with **Vision-Language Models (e.g., GPT-4o, Gemini Pro Vision)** to natively understand document layouts, tables, and handwritten signatures without lossy conversion.
+-   **🔁 Human-in-the-Loop Active Learning**: A feedback interface where user corrections on extracted data automatically fine-tune the backend embeddings, making the system smarter with every interaction.
+-   **⚡ Real-Time Streaming RAG**: Implementing WebSocket-based token streaming for instant "Character-by-Character" responses, reducing perceived latency to zero.
 
 ---
 
