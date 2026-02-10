@@ -213,6 +213,47 @@ npm run dev
 
 ---
 
+## 🧠 Deep Dive: System Architecture & Technical Details
+
+### 1. Document Processing Pipeline (`document_processor.py`)
+-   **Parsing**: Supports `PDF` (pypdf), `DOCX` (python-docx), and `TXT`.
+-   **Chunking Strategy**:
+    -   **Method**: `RecursiveCharacterTextSplitter` (LangChain)
+    -   **Chunk Size**: **1000 characters** (optimal for retaining semantic context in logistics docs)
+    -   **Overlap**: **200 characters** (prevents context loss at boundaries)
+    -   **Separators**: Logic attempts to split by paragraphs (`\n\n`), then lines (`\n`), then sentences (`. `).
+-   **Embedding Model**: `BAAI/bge-small-en-v1.5` (via HuggingFace Inference API). Validated for high performance in retrieval tasks.
+-   **Vector Storage**: **FAISS** (Facebook AI Similarity Search) using `IndexFlatIP` (Inner Product). Vectors are normalized, so Inner Product equals **Cosine Similarity**.
+
+### 2. Retrieval-Augmented Generation (RAG) Strategy (`rag_service.py`)
+-   **Retrieval**: Fetches the **Top 5** most similar chunks (`top_k=5`) based on query embedding.
+-   **Context Construction**: Chunks are concatenated and passed to the LLM system prompt.
+-   **LLM Model**: `Qwen/Qwen2.5-72B-Instruct`. Selected for its superior reasoning capabilities and strict adherence to instructions compared to smaller models.
+
+### 3. Guardrails & Hallucination Prevention (`guardrails.py`)
+To ensure enterprise-grade reliability, the system implements a **Two-Gate Guardrail System**:
+
+*   **Gate 1: Retrieval Quality Check**
+    *   If the *best* matching chunk has a similarity score **< 0.35**, the system refuses to answer, immediately returning: *"Not enough relevant context found."*
+    *   This prevents the LLM from trying to answer based on irrelevant noise.
+
+*   **Gate 2: Confidence Scoring & Verification**
+    *   The LLM is prompted to strictly self-evaluate its answer and return a `confidence` score (0.0 - 1.0).
+    *   **Final Confidence Score** = `(0.5 * Retrieval_Score) + (0.5 * LLM_Confidence)`
+    *   **Threshold**: If the Final Score is **< 0.45**, the system flags the answer as `Low Confidence` or `Refused`.
+
+### 4. Failure Cases & User Feedback
+-   **"Not found in document"**: Occurs when data is truly missing.
+-   **"Low Confidence"**: The answer might be correct but lacks strong evidence.
+-   **"Refused"**: The retrieved context was too dissimilar to the query.
+
+### 5. Future Improvements
+-   **Hybrid Search**: Combining Dense Vector Search (FAISS) with Sparse Keyword Search (BM25) to better capture specific part numbers/IDs.
+-   **Re-ranking**: Implementing a Cross-Encoder (e.g., `ms-marco-MiniLM`) to re-rank the top 20 retrieved chunks for higher precision.
+-   **Multi-Modal**: Adding OCR support to parse scanned images/receipts.
+
+---
+
 ## 👨‍💻 Credits
 
 **Built by [Mehtab Rosul](https://mehtab-portfolio-sooty.vercel.app/)**
