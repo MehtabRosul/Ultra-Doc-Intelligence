@@ -61,21 +61,34 @@ graph TD
 
 ## 📸 System Gallery
 
-### Dashboard & Analysis
+### Intelligent Logistics Dashboard
 
 <div align="center"> 
-  <img src="./public/Screenshot%202026-02-10%20210254.png" alt="Dashboard" width="800"/>
-  <p><b>Home Dashboard</b></p>
-  <br>
-  <img src="./public/Screenshot%202026-02-10%20220218.png" alt="Chat Interface" width="800"/>
-  <p><b>Analysis & Chat</b></p>
+  <img src="./public/Screenshot%202026-02-10%20220218.png" alt="Main Dashboard" width="800"/>
+  <p><b>Central Hub for Document Intelligence</b></p>
 </div>
 
-### Structured Extraction
+### Seamless Document Upload & Analytics
+
+<div align="center"> 
+  <img src="./public/Screenshot%202026-02-10%20220326.png" alt="Upload and Stats" width="800"/>
+  <p><b>Drag-and-Drop Upload with Instant File Statistics</b></p>
+</div>
+
+### Interactive Analysis Workspace
+
+<div align="center"> 
+  <img src="./public/Screenshot%202026-02-10%20220404.png" alt="Analysis Workspace" width="800"/>
+  <p><b>Real-time AI Chat, Suggested Queries, and Document Insights</b></p>
+</div>
+
+### Automated Data Extraction
 
 <div align="center">
-  <img src="./public/Screenshot%202026-02-10%20220404.png" alt="Extraction View" width="800"/>
-  <p><b>Extraction Grid</b></p>
+  <img src="./public/Screenshot%202026-02-10%20220451.png" alt="Extraction Example 1" width="800"/>
+  <br><br>
+  <img src="./public/Screenshot%202026-02-10%20220532.png" alt="Extraction Example 2" width="800"/>
+  <p><b>Precise Structured Data Extraction from Diverse Documents</b></p>
 </div>
 
 ---
