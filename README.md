@@ -10,6 +10,17 @@
 
 ---
 
+## 🌐 Live Demo
+
+👉 **[Try Ultra Doc-Intelligence Live](https://ultra-doc-intelligence.vercel.app/)**
+
+> **⚠️ Note on Initial Load:**  
+> The backend is deployed on **Render (Free Tier)**.  
+> If you are the first person visiting in a while, the server may take **~50-60 seconds to spin up** (Cold Start).  
+> **This delay only happens for the very first request/upload.** Subsequent interactions will be instant! 🚀
+
+---
+
 ## 🚀 Key Features
 
 ### 🧠 Advanced RAG Engine
