@@ -62,23 +62,41 @@ graph TD
 ## 📸 System Gallery
 
 ### Dashboard & Analysis
-| **Home Dashboard** | **Analysis & Chat** |
-|:---:|:---:|
-| ![Dashboard](./public/Screenshot%202026-02-10%20210254.png) | ![Chat Interface](./public/Screenshot%202026-02-10%20220218.png) |
+
+<div align="center"> 
+  <img src="./public/Screenshot%202026-02-10%20210254.png" alt="Dashboard" width="800"/>
+  <p><b>Home Dashboard</b></p>
+  <br>
+  <img src="./public/Screenshot%202026-02-10%20220218.png" alt="Chat Interface" width="800"/>
+  <p><b>Analysis & Chat</b></p>
+</div>
 
 ### Document Processing
-| **Upload Interface** | **File Statistics** |
-|:---:|:---:|
-| ![Upload](./public/Screenshot%202026-02-10%20220326.png) | ![Processing](./public/Screenshot%202026-02-10%20220310.png) |
+
+<div align="center">
+  <img src="./public/Screenshot%202026-02-10%20220326.png" alt="Upload" width="800"/>
+  <p><b>Upload Interface</b></p>
+  <br>
+  <img src="./public/Screenshot%202026-02-10%20220310.png" alt="File Statistics" width="800"/>
+  <p><b>File Statistics</b></p>
+</div>
 
 ### Structured Extraction
-| **Extraction Grid** | **JSON Output** |
-|:---:|:---:|
-| ![Extraction View](./public/Screenshot%202026-02-10%20220404.png) | ![Data View](./public/Screenshot%202026-02-10%220451.png) |
+
+<div align="center">
+  <img src="./public/Screenshot%202026-02-10%20220404.png" alt="Extraction View" width="800"/>
+  <p><b>Extraction Grid</b></p>
+  <br>
+  <img src="./public/Screenshot%202026-02-10%20220451.png" alt="Data View" width="800"/>
+  <p><b>JSON Output</b></p>
+</div>
 
 *(Additional Views)*
-![Footer](./public/Screenshot%202026-02-10%20211140.png)
-![Mobile View](./public/Screenshot%202026-02-10%20220532.png)
+<div align="center">
+  <img src="./public/Screenshot%202026-02-10%20211140.png" alt="Footer" width="800"/>
+  <br>
+  <img src="./public/Screenshot%202026-02-10%20220532.png" alt="Mobile View" width="400"/>
+</div>
 
 ---
 
