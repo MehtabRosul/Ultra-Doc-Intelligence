@@ -46,8 +46,12 @@ If you prefer to configure it manually:
 
 ## 🔗 Connecting Frontend
 
-Once deployed, copy your new Backend URL (e.g., `https://your-app.onrender.com`) and update your Frontend environment variables on **Vercel**:
+Once your backend is deployed on Render:
 
-*   **VITE_API_URL**: `https://your-app.onrender.com`
+1.  Copy your **Render Backend URL** (e.g., `https://ultra-doc-backend.onrender.com`).
+2.  Go to your **Vercel Dashboard** > Select your Project > **Settings** > **Environment Variables**.
+3.  Add a new variable:
+    *   **Key**: `VITE_API_URL`
+    *   **Value**: `https://ultra-doc-backend.onrender.com` (Your actual Render URL)
+4.  **Redeploy** your frontend on Vercel for the changes to take effect.
 
-**Note**: The free integration on Render spins down after 15 minutes of inactivity. It may take 50 seconds to wake up on the first request.

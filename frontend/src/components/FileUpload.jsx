@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { API_BASE_URL } from '../config'
 
 export default function FileUpload({ onUploadSuccess, isUploading, setIsUploading }) {
     const fileInputRef = useRef(null)
@@ -21,7 +22,7 @@ export default function FileUpload({ onUploadSuccess, isUploading, setIsUploadin
             const formData = new FormData()
             formData.append('file', file)
 
-            const res = await fetch('/api/upload', {
+            const res = await fetch(`${API_BASE_URL}/api/upload`, {
                 method: 'POST',
                 body: formData,
             })

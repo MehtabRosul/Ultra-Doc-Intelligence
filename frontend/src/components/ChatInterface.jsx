@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import ConfidenceBadge from './ConfidenceBadge'
+import { API_BASE_URL } from '../config'
 
 export default function ChatInterface({ documentId, suggestedQuestions = [], messages, setMessages }) {
     // const [messages, setMessages] = useState([]) // Lifted to App.jsx
@@ -23,7 +24,7 @@ export default function ChatInterface({ documentId, suggestedQuestions = [], mes
         setLoading(true)
 
         try {
-            const res = await fetch('/api/ask', {
+            const res = await fetch(`${API_BASE_URL}/api/ask`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ document_id: documentId, question: questionText }),

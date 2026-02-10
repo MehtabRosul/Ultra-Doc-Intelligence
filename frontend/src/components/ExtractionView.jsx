@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ConfidenceBadge from './ConfidenceBadge'
+import { API_BASE_URL } from '../config'
 
 const FIELD_LABELS = {
     shipment_id: 'Shipment ID',
@@ -27,7 +28,7 @@ export default function ExtractionView({ documentId }) {
         setError('')
 
         try {
-            const res = await fetch('/api/extract', {
+            const res = await fetch(`${API_BASE_URL}/api/extract`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ document_id: documentId }),
