@@ -68,13 +68,6 @@ graph TD
   <p><b>Central Hub for Document Intelligence</b></p>
 </div>
 
-### Seamless Document Upload & Analytics
-
-<div align="center"> 
-  <img src="./public/Screenshot%202026-02-10%20220326.png" alt="Upload and Stats" width="800"/>
-  <p><b>Drag-and-Drop Upload with Instant File Statistics</b></p>
-</div>
-
 ### Interactive Analysis Workspace
 
 <div align="center"> 
