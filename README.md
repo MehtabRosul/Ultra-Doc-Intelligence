@@ -71,16 +71,6 @@ graph TD
   <p><b>Analysis & Chat</b></p>
 </div>
 
-### Document Processing
-
-<div align="center">
-  <img src="./public/Screenshot%202026-02-10%20220326.png" alt="Upload" width="800"/>
-  <p><b>Upload Interface</b></p>
-  <br>
-  <img src="./public/Screenshot%202026-02-10%20220310.png" alt="File Statistics" width="800"/>
-  <p><b>File Statistics</b></p>
-</div>
-
 ### Structured Extraction
 
 <div align="center">
@@ -91,10 +81,8 @@ graph TD
   <p><b>JSON Output</b></p>
 </div>
 
-*(Additional Views)*
+*(Mobile Responsive)*
 <div align="center">
-  <img src="./public/Screenshot%202026-02-10%20211140.png" alt="Footer" width="800"/>
-  <br>
   <img src="./public/Screenshot%202026-02-10%20220532.png" alt="Mobile View" width="400"/>
 </div>
 
